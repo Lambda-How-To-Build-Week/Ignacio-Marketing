@@ -169,8 +169,19 @@ header {
 }
 #logo {
   font-family: 'Notable', sans-serif;
-  width: 25%;
   font-size: 4rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 1168px) {
+  #logo {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  #logo {
+    text-align: center;
+  }
 }
 .nav-wrapper {
   width: 80%;
@@ -178,16 +189,76 @@ header {
   justify-content: flex-start;
   align-items: center;
 }
-.nav-wrapper .navbar {
+.navbar {
   font-size: 1.6rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.nav-wrapper .navbar .nav-link {
-  width: 15%;
+@media only screen and (max-width: 1168px) {
+  .navbar {
+    justify-content: center;
+  }
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link {
   color: #23293B;
+  margin: 0 7%;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 920px) {
+  .nav-link {
+    display: none;
+  }
+}
+.mobile-container {
+  display: none;
+  color: white;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 920px) {
+  .mobile-container {
+    display: block;
+    z-index: 1000;
+    position: fixed;
+    width: 500px;
+    max-width: 100%;
+    right: 0;
+  }
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  /* position: relative; */
+}
+.topnav #myLinks {
+  display: none;
+}
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
 }
 footer {
   color: #22283B;
@@ -197,14 +268,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-* {
-  border: 1px solid grey;
-}
-#logo {
-  font-family: 'Notable', sans-serif;
-  width: 25%;
-  font-size: 4rem;
 }
 .wrapper {
   width: 70%;
@@ -222,13 +285,25 @@ footer {
 .already {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  height: 85vh;
   min-height: 610px;
   width: 40%;
   z-index: 100;
+  padding-top: 3%;
+}
+@media only screen and (max-width: 1168px) {
+  .intro,
+  .already {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .intro,
+  .already {
+    justify-content: center;
+  }
 }
 .intro h1,
 .already h1 {
@@ -238,11 +313,28 @@ footer {
   line-height: 1.3;
   font-size: 5rem;
 }
+.intro .caption,
+.already .caption {
+  width: 70%;
+  color: #23293B;
+  text-align: center;
+}
+@media only screen and (max-width: 1168px) {
+  .intro .caption,
+  .already .caption {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .intro .caption,
+  .already .caption {
+    display: none;
+  }
+}
 .intro form,
 .already form {
   width: 100%;
   text-align: center;
-  margin: 4% 0;
 }
 .intro form .form-item,
 .already form .form-item,
@@ -281,6 +373,14 @@ footer {
   width: 18%;
   line-height: 1.4;
   font-size: 1.4rem;
+}
+@media only screen and (max-width: 1168px) {
+  .intro .how span,
+  .already .how span,
+  .intro .how button,
+  .already .how button {
+    width: 37%;
+  }
 }
 .intro .line-btn,
 .already .line-btn {
@@ -325,7 +425,7 @@ footer {
   top: 0;
 }
 #slide-0 {
-  background-image: url("../img/hero1.jpg");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)), url("../img/hero5.jpg");
 }
 #slide-1 {
   background-image: url("../img/hero2.jpg");
@@ -345,6 +445,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 h2 {
   font-size: 4rem;
@@ -357,6 +458,11 @@ h2 {
   font-size: 1.8rem;
   margin: 3% 0;
 }
+@media only screen and (max-width: 920px) {
+  .cat-nav {
+    display: none;
+  }
+}
 .cat-nav .cat-item {
   margin: 0 3%;
   white-space: nowrap;
@@ -367,6 +473,11 @@ h2 {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 1168px) {
+  .featured {
+    width: 100%;
+  }
+}
 .featured .featured-item {
   min-width: 200px;
   width: 45%;
@@ -375,10 +486,141 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (max-width: 920px) {
+  .featured .featured-item {
+    width: 100%;
+  }
+}
 .featured .featured-item .item-label {
   text-align: center;
   font-size: 2rem;
   padding: 2%;
+}
+.navbar1 {
+  background: white;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.08);
+}
+.wrapper {
+  width: 70%;
+  margin-top: 10%;
+  height: 300px;
+  max-height: 100%;
+}
+.wrapper h2 {
+  padding: 15px;
+}
+.wrapper p {
+  padding: 0 15px;
+}
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 610px;
+  width: 40%;
+  z-index: 100;
+  padding-top: 3%;
+}
+@media only screen and (max-width: 1168px) {
+  .about-intro {
+    width: 80%;
+  }
+}
+.about-intro h1 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 35px;
+  line-height: 1.3;
+  font-size: 5rem;
+}
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+.type {
+  display: flex;
+  justify-content: space-around;
+}
+.checkbox-container {
+  width: 48%;
+}
+#signup {
+  margin-top: 5%;
+}
+#first-name,
+#last-name {
+  width: 47%;
+}
+.already .already-item {
+  width: 44%;
+}
+.home {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+}
+.main-btn {
+  line-height: 1.4;
+  font-size: 1.8rem;
+  padding: 15px;
+  font-weight: 600;
+  background: #FF8A59;
+  border-radius: 10px;
+  width: 200px;
+  text-transform: uppercase;
+}
+.team {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.team .member {
+  min-width: 200px;
+  width: 30%;
+  margin: 0 0 3% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team .member:hover img {
+  background: black;
+  border-radius: 3%;
+  border: 10px solid #FF8A59;
+  margin-bottom: -7px;
+}
+.team .member:hover .label {
+  background: #FF8A59;
+  border-radius: 3%;
+  border: 10px solid #FF8A59;
+}
+.team img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 70%;
+}
+.team .label {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team .name {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2%;
+}
+.team .caption {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #23293B;
 }
 .navbar1 {
   background: white;

@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Notable|Playfair+Display|Raleway&display=swap" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -20,11 +21,29 @@
   <header id='scroll-nav'>
     <div class="nav-wrapper">
       <nav class="navbar">
-        <a class="nav-link" id="logo" href="#">How-to</a>
-        <a class="nav-link" href="#">How it works</a>
-        <a class="nav-link" href="#">About us</a>
+        <a id="logo" href="index.html">How-to</a>
+        <div class="links">
+          <a class="nav-link" href="about.html">About us</a>
+          <a class="nav-link" href="login.html">Sign up</a>
+        </div>
       </nav>
+                  <!-- Simulate a smartphone / tablet -->
     </div>
+    <div class="mobile-container">
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <!-- <a href="#home" class="active"></a> -->
+          <div id="myLinks">
+            <a href="about.html">About</a>
+            <a href="login.html">Sign up</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+    
+
   </header>
 
   <div class="container home">
@@ -94,7 +113,8 @@
 
 <!-- partial -->
 <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script  src="js/script.js"></script>
+<script src="js/nav-scroll.js"></script>
+<script src="js/mobile-toggle.js"></script>
 
 
   </div>
