@@ -1,0 +1,36 @@
+// Marketing nav
+
+header {
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 87px;
+}
+
+#logo {
+  font-family: @logo-font;
+  width: 25%;
+  font-size: 4rem;
+}
+
+.nav-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .navbar {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    .nav-link {
+      width: 15%;
+      color: @header-font-color;
+    }
+  }
+}

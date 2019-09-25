@@ -1,0 +1,386 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #5E6164;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Russo One', sans-serif;
+  color: #23293B;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.2rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+header {
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 87px;
+}
+#logo {
+  font-family: 'Notable', sans-serif;
+  width: 25%;
+  font-size: 4rem;
+}
+.nav-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-wrapper .navbar {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.nav-wrapper .navbar .nav-link {
+  width: 15%;
+  color: #23293B;
+}
+footer {
+  color: #22283B;
+  padding: 20px 0;
+  border: 1px double #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  border: 1px solid grey;
+}
+#logo {
+  font-family: 'Notable', sans-serif;
+  width: 25%;
+  font-size: 4rem;
+}
+.wrapper {
+  width: 70%;
+  margin-top: 10%;
+  height: 300px;
+  max-height: 100%;
+}
+.wrapper h2 {
+  padding: 15px;
+}
+.wrapper p {
+  padding: 0 15px;
+}
+.intro,
+.already {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 85vh;
+  min-height: 610px;
+  width: 40%;
+  z-index: 100;
+}
+.intro h1,
+.already h1 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 35px;
+  line-height: 1.3;
+  font-size: 5rem;
+}
+.intro form,
+.already form {
+  width: 100%;
+  text-align: center;
+  margin: 4% 0;
+}
+.intro form .form-item,
+.already form .form-item,
+.intro form .form-item > input,
+.already form .form-item > input {
+  line-height: 1.4;
+  font-size: 1.6rem;
+  padding: 5px;
+  margin: 10px 0;
+}
+.intro form .name,
+.already form .name {
+  display: flex;
+  justify-content: space-between;
+}
+.intro form .type,
+.already form .type {
+  display: flex;
+  justify-content: space-around;
+}
+.intro form .checkbox-container,
+.already form .checkbox-container {
+  width: 48%;
+}
+.intro .how,
+.already .how {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+.intro .how span,
+.already .how span,
+.intro .how button,
+.already .how button {
+  width: 18%;
+  line-height: 1.4;
+  font-size: 1.4rem;
+}
+.intro .line-btn,
+.already .line-btn {
+  background-color: #0f72e5;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  line-height: 1.4;
+  font-size: 1.6rem;
+}
+.intro #signup,
+.already #signup {
+  margin-top: 5%;
+}
+.intro #first-name,
+.already #first-name,
+.intro #last-name,
+.already #last-name {
+  width: 47%;
+}
+.already .already-item {
+  width: 44%;
+}
+.home {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+}
+.slide {
+  width: 100%;
+  position: absolute;
+  min-height: 610px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  top: 0;
+}
+#slide-0 {
+  background-image: url("../img/hero1.jpg");
+}
+#slide-1 {
+  background-image: url("../img/hero2.jpg");
+}
+.main-btn {
+  line-height: 1.4;
+  font-size: 1.8rem;
+  padding: 15px;
+  font-weight: 600;
+  background: #FF8A59;
+  border-radius: 10px;
+  width: 200px;
+  text-transform: uppercase;
+}
+.categories {
+  margin: 4% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  font-size: 4rem;
+  font-family: 'Russo One', sans-serif;
+}
+.cat-nav {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 3% 0;
+}
+.cat-nav .cat-item {
+  margin: 0 3%;
+  white-space: nowrap;
+}
+.featured {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.featured .featured-item {
+  min-width: 200px;
+  width: 45%;
+  margin: 0 0 3% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featured .featured-item .item-label {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2%;
+}
+.navbar1 {
+  background: white;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.08);
+}
