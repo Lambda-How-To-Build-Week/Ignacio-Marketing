@@ -1,143 +1,8 @@
-// // Home Content
+// SECTION HERO
 
-
-  .wrapper {
-    width: 70%;
-    margin-top: 10%;
-    height: 300px;
-    max-height: 100%;
-
-
-    h2 {
-      padding: 15px;
-    }
-
-    p {
-      padding:0 15px;
-    }
-  
-  }
-
-  .intro, .already {
-    .my-flex(@direction:column);
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    // height: 85vh;
-    min-height: 610px;
-    width: 100%;
-    z-index: 100;
-    padding-top: 3%;
-
-    @media @phone {
-      justify-content: center;
-    }
-
-    h1 {
-      width: 100%;
-      text-align: center;
-      // line-height: 1.3;
-      font-size: 5rem;
-    }
-
-    .caption {
-      width: 28%;
-      color: @header-font-color;
-      text-align: center;
-      @media @tablet {
-        width: 40%;
-      }
-      @media @phone {
-        display: none;
-      }
-    }
-
-    form {
-      width: 100%;
-      text-align: center;
-      // margin: 4% 0;
-
-      .form-item, .form-item>input {
-        line-height: 1.4;
-        font-size: 1.6rem;
-        padding: 5px;
-        margin: 10px 0;
-        
-      }
-
-
-
-      .name {
-        display: flex;
-        justify-content: space-between;
-      }
-      .type{
-        display: flex;
-        justify-content: space-around;
-      }      
-
-      .checkbox-container {
-        width: 48%;
-      }
-
-
-    }
-  
-.how {
-  .my-flex(@direction:column);
-  text-transform: uppercase;
-  margin: 2% 0;
-
-  span, button {
-    // width: 18%;
-    line-height: 1.4;
-    // font-size: 1.4rem;
-    font-size: calc(10px + 0.5vw);
-    white-space: nowrap;
-    @media @tablet {
-      // width: 37%;
-    }
-  }
-
-  .button-cont {
-    line-height: 0;
-  }
-}
-
-.line-btn {
-  background-color: #0f72e5;
-  bottom: 0;
-  content: "";
-  height: 2px;
-  left: 0;
-  line-height: 1.4;
-  font-size: 1.6rem;
-  // position: absolute;
-  // width: 100%;
-  width: calc(70px + 4vw);
-}
-
-#signup {
-  margin-top: 5%;
-}
-
-#first-name, #last-name {
-  width: 47%;
-}
-  }
-
-.already {
-  // background: @container;
-  .already-item {
-    width: 44%;
-  }
-}
-
-.home {
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  overflow: hidden;
-
+.navbar1 {
+  background: white;
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,.08);
 }
 
 .hero {
@@ -145,9 +10,7 @@
   justify-content: center;
 }
 
-.slider {}
-
-.slide {
+.hero-image {
   width: 100%;
   position: absolute;
   min-height: 610px;
@@ -157,13 +20,65 @@
   top: 0;
 }
 
-#slide-0 {
+#hero0 {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(255, 255, 255, 0.9),rgba(0, 0, 0, 0)
   ),url("../img/hero5.jpg");
 }
 
-#slide-1 {
-  background-image: url("../img/hero2.jpg");
+.intro {
+  .my-flex(@direction:column);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  min-height: 610px;
+  width: 100%;
+  z-index: 100;
+  padding-top: 3%;
+
+  @media @phone {
+    justify-content: center;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .caption {
+    width: 28%;
+    color: @header-font-color;
+    text-align: center;
+    @media @tablet {
+      width: 40%;
+    }
+    @media @phone {
+      display: none;
+    }
+  }
+}
+
+form {
+  width: 100%;
+  text-align: center;
+  
+  .form-item, .form-item>input {
+    line-height: 1.4;
+    font-size: 1.6rem;
+    padding: 5px;
+    margin: 10px 0; 
+  }
+  .name {
+    display: flex;
+    justify-content: space-between;
+  }
+  .type{
+    display: flex;
+    justify-content: space-around;
+  }      
+
+  .checkbox-container {
+    width: 48%;
+  }
 }
 
 .main-btn {
@@ -177,22 +92,52 @@
   text-transform: uppercase;
 }
 
-// Section 2: Categories
+.how {
+  .my-flex(@direction:column);
+  text-transform: uppercase;
+  margin: 2% 0;
+
+  span, button {
+    line-height: 1.4;
+    font-size: calc(10px + 0.5vw);
+    white-space: nowrap;
+  }
+  .button-cont {
+    line-height: 0;
+  }
+}
+
+.line-btn {
+  background-color: #0f72e5;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  line-height: 1.4;
+  font-size: 1.6rem;
+  width: calc(70px + 4vw);
+}
+
+#signup {
+  margin-top: 5%;
+}
+
+
+// SECTION CATEGORIES
 
 .categories {
   margin: 4% 0;
   .my-flex(@direction:column);
-}
-
-h2 {
-  font-size: 4rem;
-  font-family: @headings;
+  
+  h2 {
+    font-size: 4rem;
+    font-family: @headings;
+  }
 }
 
 .cat-nav {
   display: flex; 
   justify-content: space-around;
-  // width: 40%;
   text-align: center;
   font-size: 1.8rem;
   margin: 3% 0;
@@ -202,7 +147,6 @@ h2 {
   }
 
   .cat-item {
-    // width: 20%;
     margin: 0 3%;
     white-space: nowrap;
   }
@@ -216,38 +160,33 @@ h2 {
   @media @tablet {
     width: 100%;
   }
+}
 
-  .featured-item {
-    min-width: 200px;
-    width: 45%;
-    margin: 0 0 3% 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media @phone {
-      width: 100%;
-    }
+.featured-item {
+  min-width: 200px;
+  width: 45%;
+  margin: 0 0 3% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media @phone {
+    width: 100%;
+  }
 
-    .item-label {
-      text-align: center;
-      font-size: 2rem;
-      padding: 2%;
-    }
+  .item-label {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2%;
   }
 }
 
-.navbar1 {
-  background: white;
-  box-shadow: 0 2px 20px 0 rgba(0,0,0,.08);
-}
 
 
 /* [SLIDER] */
 #slider,  #slider .slide{
   width: 100%;
-  height: 100px;
+  height: 110px;
   max-width: 70vw;
-  // max-width: 500px;
 }
 #slider {
   overflow: hidden;
@@ -256,7 +195,7 @@ h2 {
 }
 #slider .title-container {
   position: relative;
-  width: 9000px; /* Assign an insanely large width */
+  width: 9000px;
   max-width: 9000px;
   top: 0;
   right: 0;

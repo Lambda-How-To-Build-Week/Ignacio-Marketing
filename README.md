@@ -7,3 +7,4 @@ Cool things I added:
 -About page teammates change style when you hover over them
 -Used vw for the font size in the button 'how it works'
 -Used parametric mixins
+-Use text slider against hero image
