@@ -279,8 +279,9 @@ footer {
 .already {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
   min-height: 610px;
   width: 40%;
@@ -358,23 +359,23 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-transform: uppercase;
+  margin: 2% 0;
 }
 .intro .how span,
 .already .how span,
 .intro .how button,
 .already .how button {
-  width: 18%;
   line-height: 1.4;
-  font-size: 1.4rem;
+  font-size: calc(10px + 0.5vw);
+  white-space: nowrap;
 }
 @media only screen and (max-width: 1168px) {
-  .intro .how span,
-  .already .how span,
-  .intro .how button,
-  .already .how button {
-    width: 37%;
-  }
+}
+.intro .how .button-cont,
+.already .how .button-cont {
+  line-height: 0;
 }
 .intro .line-btn,
 .already .line-btn {
@@ -385,6 +386,7 @@ footer {
   left: 0;
   line-height: 1.4;
   font-size: 1.6rem;
+  width: calc(70px + 4vw);
 }
 .intro #signup,
 .already #signup {
@@ -439,7 +441,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 h2 {
   font-size: 4rem;
@@ -575,6 +577,12 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 4% 0;
+}
+@media only screen and (max-width: 1168px) {
+  .team {
+    width: 100%;
+  }
 }
 .team .member {
   min-width: 200px;
@@ -594,6 +602,16 @@ h2 {
   background: #FF8A59;
   border-radius: 3%;
   border: 10px solid #FF8A59;
+}
+@media only screen and (max-width: 920px) {
+  .team .member {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .team .member {
+    width: 50%;
+  }
 }
 .team img {
   border-radius: 50%;

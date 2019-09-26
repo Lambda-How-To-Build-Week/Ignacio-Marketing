@@ -114,13 +114,18 @@
   text-transform: uppercase;
 }
 
-// Section 2: Categories
+// Section 2: Team
 
 .team {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 4% 0;
+
+  @media @tablet {
+    width: 100%;
+  }
   
 
   .member {
@@ -142,6 +147,12 @@
         border: 10px solid @cta-button;
         }
         
+      }
+      @media @phone {
+        width: 40%;
+      }
+      @media @small {
+        width: 50%;
       }
     }
 
