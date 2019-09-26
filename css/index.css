@@ -89,6 +89,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  max-width: 100%;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -503,6 +504,7 @@ h2 {
   position: relative;
   width: 9000px;
   /* Assign an insanely large width */
+  max-width: 9000px;
   top: 0;
   right: 0;
   animation: slide-animation 20s infinite;
