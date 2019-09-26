@@ -25,6 +25,11 @@
   ),url("../img/hero5.jpg");
 }
 
+#hero1 {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(255, 255, 255, 0.9),rgba(0, 0, 0, 0)
+  ),url("../img/hero3.jpg");
+}
+
 .intro {
   .my-flex(@direction:column);
   justify-content: flex-end;
@@ -96,11 +101,13 @@ form {
   .my-flex(@direction:column);
   text-transform: uppercase;
   margin: 2% 0;
+  
 
   span, button {
     line-height: 1.4;
     font-size: calc(10px + 0.5vw);
     white-space: nowrap;
+    color: @header-font-color;
   }
   .button-cont {
     line-height: 0;
@@ -108,7 +115,7 @@ form {
 }
 
 .line-btn {
-  background-color: #0f72e5;
+  background-color: @line-btn;
   bottom: 0;
   content: "";
   height: 2px;
@@ -149,6 +156,7 @@ form {
   .cat-item {
     margin: 0 3%;
     white-space: nowrap;
+    color: @header-font-color;
   }
 }
 
